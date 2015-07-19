@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -8,16 +8,16 @@ def index():
     This is the index view for FayettePy.
     It is loaded at "/"
     """
-    return "<h1>It worked!</h1>"
+    return render_template("index.html", color_list=['red', 'green', 'blue'])
 
 
-@app.route("/profile")
-def profile():
+@app.route("/events")
+def events():
     """
     This is the index view for FayettePy.
     It is loaded at "/"
     """
-    return "<h1>This is a user's profile page</h1>"
+    return "<h1>This is the events page</h1>"
 
 if __name__ == '__main__':
     app.debug = True
