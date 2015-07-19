@@ -17,7 +17,7 @@ def events():
     This is the index view for FayettePy.
     It is loaded at "/"
     """
-    return "<h1>This is the events page</h1>"
+    return render_template("events.html")
 
 if __name__ == '__main__':
     app.debug = True
